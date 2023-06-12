@@ -8,9 +8,10 @@ from langchain.prompts import PromptTemplate
 API_KEY = os.getenv("OPENAI_API_KEY")
 
 st.title("gpt")
-prompt = st.text_input("enter prompt here", key="prompt")
+prompt = st.text_input("enter prompt here", key="1")
 
-llm = OpenAI(temperature=0.9)
+llm = OpenAI()
 
 if prompt:
     response = llm(prompt)
+    st.write(response)
